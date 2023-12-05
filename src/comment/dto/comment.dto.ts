@@ -6,18 +6,19 @@ import {
 } from 'class-validator';
 
 export class CommentDto {
+  @IsNumber()
   @IsNotEmpty()
   bookId: number;
 
   @IsNumber()
   @IsNotEmpty()
-  rating: string;
+  userId: number;
+
+  @IsNumber()
+  @IsNotEmpty()
+  rating: number;
 
   @IsOptional()
   @IsString()
   content: string;
-
-  @IsOptional()
-  @IsString()
-  lastName: string;
 }

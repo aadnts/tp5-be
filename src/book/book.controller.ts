@@ -2,12 +2,12 @@ import {
   Controller,
   Get,
   Param,
-  UseGuards,
+  // UseGuards,
 } from '@nestjs/common';
-import { JwtGuard } from 'src/auth/guard';
+// import { JwtGuard } from 'src/auth/guard';
 import { BookService } from './book.service';
 
-@UseGuards(JwtGuard)
+// @UseGuards(JwtGuard)
 @Controller('books')
 export class BookController {
   constructor(private bookService: BookService) {}
